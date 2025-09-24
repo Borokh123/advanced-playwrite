@@ -2,13 +2,19 @@
   "name": "aqa---projects",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "npx playwright test",
+    "test:ui": "npx playwright test --ui",
+    "test:show-report": "npx playwright show-report",
+    "test:debug-logs": "cross-env DEBUG=* DEBUG_FILE=logs.txt npx playwright test"
+  },
   "keywords": [],
-  "author": "",
+  "author": "Gennadiy Borokh",
   "license": "ISC",
   "description": "",
   "devDependencies": {
     "@playwright/test": "^1.55.0",
-    "@types/node": "^24.3.1"
+    "@types/node": "~24.2.0",
+    "cross-env": "^10.0.0"
   }
 }

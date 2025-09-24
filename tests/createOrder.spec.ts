@@ -4,6 +4,7 @@ test('Create an order', async ({ page }) => {
   await page.goto('https://ilarionhalushka.github.io/jekyll-ecommerce-demo/url');
   await page.getByRole('navigation').getByRole('link', { name: 'Products' }).click();
   await page.getByRole('listitem').filter({ hasText: 'Gavin the Tiger Gavin the' }).getByRole('link').first().click();
+  await page.pause();
   await page.getByRole('button', { name: 'Add to cart' }).click();
   await page.getByRole('button', { name: 'Checkout' }).click();
   await page.getByRole('textbox', { name: 'Full name' }).click();
